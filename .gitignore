@@ -1,0 +1,9 @@
+# Composer dependencies.
+/vendor/
+
+# Docker.
+/docker-runtime/
+
+# Drupal core & contrib.
+/docroot/
+!/docroot/sites/default/settings.php

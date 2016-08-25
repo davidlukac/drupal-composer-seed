@@ -1,0 +1,52 @@
+{
+  "name": "davidlukac/drupal-composer-start",
+  "description": "Example repository for working with Drupal via composer.",
+  "type": "project",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "David Lukac",
+      "email": "david.lukac@gmail.com"
+    }
+  ],
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packagist.drupal-composer.org"
+    },
+    "docker4drupal": {
+      "type": "package",
+      "package": {
+        "name": "wodby/docker4drupal",
+        "version": "master",
+        "source": {
+          "url": "https://github.com/Wodby/docker4drupal.git",
+          "type": "git",
+          "reference": "master"
+        }
+      }
+    }
+  },
+  "require": {
+    "php": ">=5.6",
+    "davidbarratt/custom-installer": "~1.0.0-alpha2",
+    "drupal/drupal": "~7.50.0",
+    "drupal/features": "~7.2.10",
+    "drupal/bootstrap": "~7.3.6",
+    "drupal/admin_menu": "~7.3.0-rc5"
+  },
+  "require-dev": {
+    "drupal/devel": "1.5",
+    "wodby/docker4drupal": "dev-master"
+  },
+  "extra": {
+    "custom-installer": {
+      "docroot/": ["type:drupal-core"],
+      "docroot/sites/all/modules/contrib/{$name}/": ["type:drupal-module"],
+      "docroot/sites/all/themes/contrib/{$name}/": ["type:drupal-theme"]
+    }
+  },
+  "config": {
+    "bin-dir": "bin/"
+  }
+}
