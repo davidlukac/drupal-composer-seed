@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0bff9744002cc92cc01fba8134735f49",
-    "content-hash": "6dfa8963b53d8305116051cf8f69e89f",
+    "hash": "c38000ce24897d9e52fd24f702f9821c",
+    "content-hash": "baad9dc41d713967d6b5ed510fa7492b",
     "packages": [
         {
             "name": "davidbarratt/custom-installer",
@@ -57,7 +57,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/admin_menu-7.x-3.0-rc5.zip",
-                "reference": null,
+                "reference": "7.x-3.0-rc5",
                 "shasum": "64de77d5b1ed7158549a4fc6f2fd657aaacdaead"
             },
             "require": {
@@ -116,7 +116,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/bootstrap-7.x-3.6.zip",
-                "reference": null,
+                "reference": "7.x-3.6",
                 "shasum": "2db584044b698522ca67bb69067340ce5a84103a"
             },
             "require": {
@@ -166,7 +166,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/drupal-7.50.zip",
-                "reference": null,
+                "reference": "088db3b125ef666914b788202dedefbf314bca98",
                 "shasum": null
             },
             "replace": {
@@ -273,7 +273,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/features-7.x-2.10.zip",
-                "reference": null,
+                "reference": "7.x-2.10",
                 "shasum": "b49cf87df5197195003e24ec679ffbc7c4ea1e08"
             },
             "require": {
@@ -341,6 +341,53 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/features"
             }
+        },
+        {
+            "name": "drupal/master",
+            "version": "2.0.0-beta4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/master",
+                "reference": "7.x-2.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/master-7.x-2.0-beta4.zip",
+                "reference": null,
+                "shasum": "b92bae325a67ad3c7a70f66e6ffff60d8f9ba7ec"
+            },
+            "require": {
+                "drupal/drupal": "~7.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "7.x-2.0-beta4",
+                    "datestamp": "1419344880"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/7/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "derhasi",
+                    "homepage": "https://www.drupal.org/user/83474"
+                },
+                {
+                    "name": "lucastockmann",
+                    "homepage": "https://www.drupal.org/user/2199850"
+                }
+            ],
+            "description": "Master control to provide (drush) utilities for setting dependent and disabling unecessary modules and reverting features for a site configuration.",
+            "homepage": "https://www.drupal.org/project/master",
+            "support": {
+                "source": "http://cgit.drupalcode.org/master"
+            }
         }
     ],
     "packages-dev": [
@@ -355,7 +402,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/devel-7.x-1.5.zip",
-                "reference": null,
+                "reference": "7.x-1.5",
                 "shasum": "9065fe4fbaa260e087b4d2b1876bf8a768fade13"
             },
             "require": {
@@ -443,6 +490,7 @@
     "stability-flags": {
         "davidbarratt/custom-installer": 15,
         "drupal/admin_menu": 5,
+        "drupal/master": 10,
         "wodby/docker4drupal": 20
     },
     "prefer-stable": false,

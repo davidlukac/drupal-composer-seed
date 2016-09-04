@@ -33,11 +33,12 @@
     "drupal/drupal": "~7.50.0",
     "drupal/features": "~2.10",
     "drupal/bootstrap": "~3.6",
-    "drupal/admin_menu": "~3.0-rc5"
+    "drupal/admin_menu": "~3.0-rc5",
+    "drupal/master": " ~2.0.0-beta4"
   },
   "require-dev": {
     "drupal/devel": "1.5",
-    "wodby/docker4drupal": "dev-master"
+    "wodby/docker4drupal": "dev-master#b53bee5fcd0096674eda6bcafae92b437b98b76f"
   },
   "extra": {
     "custom-installer": {
@@ -48,5 +49,11 @@
   },
   "config": {
     "bin-dir": "bin/"
+  },
+  "scripts": {
+    "post-install-cmd": [
+        "mkdir -p src/site-features/",
+        "if [ ! -e 'docroot/sites/all/modules/features' ]; then ln -s ../../../../src/site-features/ docroot/sites/all/modules/features; fi"
+      ]
   }
 }
